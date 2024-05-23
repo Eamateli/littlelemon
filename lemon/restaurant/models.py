@@ -18,7 +18,7 @@ class Booking(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=255)
     number_of_guests = models.PositiveIntegerField()
-    booking_date = models.DateTimeField()
+    booking_date = models.DateTimeField(auto_now_add=True)
     
     class Meta:
         verbose_name = 'Booking'
