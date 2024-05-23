@@ -41,3 +41,8 @@ def reservations(request:HttpRequest) -> HttpResponse:
     booking_json = serializers.serialize('json', bookings)
     return render(request, 'reservations.html',{"bookings":booking_json})
 
+
+def the_year(request):
+    current_year = datetime.now().year
+    return render(request, 'my_template.html', {'current_year': current_year})
+
